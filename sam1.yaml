@@ -1,0 +1,3 @@
+- task: sample1
+  hosts: all
+  
