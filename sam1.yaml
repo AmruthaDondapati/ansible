@@ -3,4 +3,4 @@
   task:
     - name: task 1
   ansible.builtin.debug:
-    msg: how r u
+    msg: hi
