@@ -10,4 +10,7 @@
       ansible.builtin.debug:
         msg: here is the link {{LINK}}
       vars:
-        LINK: local.com                                       
+        LINK: local.com     
+     - name: TASK 1 shoould be where is the link ??
+      ansible.builtin.debug:
+        msg: command link is "{{cmnd_link}}"                                  
