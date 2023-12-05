@@ -12,4 +12,4 @@
     - name: TASK 2 direct link ??
       ansible.builtin.debug:
         msg: "{{LINK}}"
-      LINK: local.com                                       # local declaration
+    LINK: local.com                                       # local declaration
