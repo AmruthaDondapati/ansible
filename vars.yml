@@ -4,7 +4,7 @@
 - name: play1
   hosts: qa
   vars: 
-    LINK: {{ggl.com}} 
+    LINK: ggl.com
     - name: where is the link ??
       ansible.builtin.debug:
         msg: here is the link {{LINK}}
