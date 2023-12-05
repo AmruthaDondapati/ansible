@@ -9,7 +9,7 @@
         msg: "{{started.stdout_lines}}"
     - name: Printthe uptime of the severs 
       ansible.builtin.set_fact:
-      status: {{started.rc}}
+      status: "{{started.rc}}"
 
     - name: Printing start time  
       ansible.builtin.debug:
