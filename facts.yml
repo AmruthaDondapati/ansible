@@ -1,0 +1,6 @@
+- name: Hands on facts
+  hosts: all
+  tasks:
+    - name: getting the vendor info.
+      ansible.builtin.debug:
+        msg: vendor name is = {{ansible_system_vendor}}
