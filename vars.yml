@@ -5,9 +5,9 @@
   vars_files:
     file.yml  
   vars_prompt:
-    - name: LINK 
+    - name: PROMPT_LINK 
       prompt: Enter LINK Value 
-      private: true                               
+      private: false                               
   tasks:
     - name: TASK 1 should be where is the link ??
       ansible.builtin.debug:
@@ -25,4 +25,4 @@
         msg: "{{LINK}}"   
     - name: TASK 5 should be where is the prompt link ??
       ansible.builtin.debug:
-        msg: "{{LINK}}"                               
+        msg: "{{PROMPT_LINK}}"                               
