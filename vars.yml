@@ -1,7 +1,7 @@
 - name: play1
   hosts: all
   vars: 
-    LINK: global.com 
+    LINK: global.com    #global
   vars_files:
     file.yml  
   vars_prompt:
