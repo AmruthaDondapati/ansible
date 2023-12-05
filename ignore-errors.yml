@@ -5,7 +5,7 @@
       ansible.builtin.shell: ps -ef | grep tomcat | grep -v grep
       register: OUT
       ignore_errors: yes
-      
+
     - name: say hi
       ansible.builtin.debug: 
-        msg: heyy hi 
+        msg: heyy hi
