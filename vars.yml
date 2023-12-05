@@ -5,6 +5,7 @@
   hosts: qa
   vars: 
     LINK: ggl.com
+  tasks:
     - name: where is the link ??
       ansible.builtin.debug:
         msg: here is the link {{LINK}}
