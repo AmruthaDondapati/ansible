@@ -1,7 +1,9 @@
 - name: pay1
-  hosts: qa
-  tasks:
+  hosts: all
+  tasks: perform based on the resp server info
     - name: patching needs to be done on below servers.
       ansible.builtin.debug:
         msg: r1 
-  
+   - name: patching needs to be done on below servers.
+      ansible.builtin.debug:
+        msg: r2
