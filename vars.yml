@@ -4,7 +4,7 @@
 - name: play1
   hosts: qa
   vars: 
-    LINK: ggl.com
+    LINK: global.com                                     # global declaration
   tasks:
     - name: TASK 1 shoould be where is the link ??
       ansible.builtin.debug:
@@ -12,3 +12,4 @@
     - name: TASK 2 direct link ??
       ansible.builtin.debug:
         msg: "{{LINK}}"
+    vars: local.com                                       # local declaration
