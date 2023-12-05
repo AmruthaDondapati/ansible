@@ -1,9 +1,12 @@
 - name: pay1
-  hosts: all
+  hosts: dev
   tasks:
     - name: patching needs to be done on below servers.
       ansible.builtin.debug:
         msg: r1 
+- name: pay1
+  hosts: qa
+  tasks:
     - name: patching needs to be done on below servers.
       ansible.builtin.debug:
         msg: r2
