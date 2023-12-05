@@ -1,10 +1,9 @@
 - name: hands on erros  
   hosts: all 
   tasks:
-    - name: excuting the below
+    - name: executing the below
       ansible.builtin.shell: ps -ef | grep tomcat | grep -v grep
-      status: OUT
-
+    status: OUT
     - name: say hi
       ansible.builtin.debug: 
         msg: heyy hi 
