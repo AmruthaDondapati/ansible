@@ -1,9 +1,16 @@
 - name: handson bash  
   hosts: all 
   tasks: 
-    - name: Printing teh uptime of the severs 
+    - name: Printing the uptime of the severs 
       ansible.builtin.shell: uptime
       register: started
     - name: Printing start time  
       ansible.builtin.debug:
-        msg: heyy i'm {{started.stdout_lines}} on
+        msg: "{{started.stdout_lines}}"
+    - name: Printthe uptime of the severs 
+      ansible.builtin.set_fact:
+      status: {{started.rc}}
+
+    - name: Printing start time  
+      ansible.builtin.debug:
+        msg: "{{status}}"
