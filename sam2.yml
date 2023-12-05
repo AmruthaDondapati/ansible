@@ -4,7 +4,7 @@
     - name: patching needs to be done on below servers.
       ansible.builtin.debug:
         msg: r1 
-- name: pay1
+- name: pay2
   hosts: qa
   tasks:
     - name: patching needs to be done on below servers.
