@@ -6,4 +6,4 @@
       register: started
     - name: Printing start time  
       ansible.builtin.debug:
-        msg: heyy i'm {{started}} on
+        msg: heyy i'm {{started.stdout_lines}} on
