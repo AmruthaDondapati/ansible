@@ -4,7 +4,7 @@
     - name: TASK 1 getting the vendor info.
       ansible.builtin.debug:
         msg: vendor name is = {{ansible_system_vendor}}
-        
+
     - name: TASK 2 getting the IPv4 value.
       ansible.builtin.debug:
-        msg: block_used is {{ansible_mounts.block_used}}
+        msg: Mac address is {{ansible_default_ipv4.macaddress}}
