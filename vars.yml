@@ -13,4 +13,4 @@
         LINK: local.com     
     - name: TASK 3 shoould be where is the link ??
       ansible.builtin.debug:
-        msg: command link is "{{cmnd_link}}"                                  
+        msg: command link is {{cmnd_link}}                                 
