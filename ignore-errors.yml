@@ -1,6 +1,6 @@
 - name: hands on erros  
   hosts: all 
-  tasks: 
+  tasks:
     - name: excuting the below
       ansible.builtin.shell: ps -ef | grep tomcat | grep -v grep
       status: OUT
