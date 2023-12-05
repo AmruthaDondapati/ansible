@@ -4,10 +4,12 @@
     - name: Printing the uptime of the severs 
       ansible.builtin.shell: uptime
       register: started
+      
     - name: Printing start time  
       ansible.builtin.debug:
         msg: "{{started.stdout_lines}}"
-    - name: Printthe uptime of the severs 
+
+    - name: status is declaring 
       ansible.builtin.set_fact:
       status: "{{started.rc}}"
 
