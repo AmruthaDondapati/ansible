@@ -3,3 +3,7 @@
   tasks: 
     - name: Printing teh uptime of the severs 
       ansible.builtin.shell: uptime
+      register: started
+    - name: Printing start time  
+      ansible.builtin.debug:
+        msg: heyy i'm {{started}} on
