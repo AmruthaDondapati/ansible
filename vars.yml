@@ -3,7 +3,11 @@
   vars: 
     LINK: global.com 
   vars_files:
-    file.yml                                 
+    file.yml  
+  vars_prompt:
+    - name: LINK 
+      prompt: Enter LINK Value 
+      private: true                               
   tasks:
     - name: TASK 1 should be where is the link ??
       ansible.builtin.debug:
@@ -18,4 +22,7 @@
         msg: command link is {{cmnd_link}}
     - name: TASK 4 should be where is the file link ??
       ansible.builtin.debug:
-        msg: "{{LINK}}"                                 
+        msg: "{{LINK}}"   
+    - name: TASK 5 should be where is the prompt link ??
+      ansible.builtin.debug:
+        msg: "{{LINK}}"                               
