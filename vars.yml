@@ -6,9 +6,9 @@
   vars: 
     LINK: ggl.com
   tasks:
-    - name: where is the link ??
+    - name: TASK 1 shoould be where is the link ??
       ansible.builtin.debug:
         msg: here is the link {{LINK}}
-    - name: direct link ??
+    - name: TASK 2 direct link ??
       ansible.builtin.debug:
         msg: "{{LINK}}"
