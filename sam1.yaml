@@ -1,6 +1,6 @@
 - name: sample1
   hosts: all
   task:
-    - name: task1
-      ansible.builtin.debug:
-        msg: How u doin..g
+    - name: task 1
+  ansible.builtin.debug:
+    msg: how r u
