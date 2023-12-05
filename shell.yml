@@ -1,0 +1,5 @@
+- name: handson bash  
+  hosts: all 
+  tasks: 
+    - name: Printing teh uptime of the severs 
+      ansible.builtin.shell: uptime
