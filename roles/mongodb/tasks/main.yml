@@ -8,3 +8,8 @@
     name: mongodb-org
     state: present
 
+- name: Start service mongodb, if not started
+  ansible.builtin.service:
+    name: mongodb-org
+    state: started
+    enabled: yes
