@@ -20,5 +20,5 @@
 - name: moving the resp files
   ansible.builtin.copy:
     src: /tmp/catalogue-main/
-    dest: /tmp/catalogue
+    dest: /home/roboshop/catalogue
     remote_src: yes
