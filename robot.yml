@@ -1,0 +1,4 @@
+- name: configuring the robot notion
+  hosts: "{{COMPONENT}}"
+  roles: 
+    - "{{COMPONENT}}"
