@@ -9,3 +9,14 @@
     dest: /tmp
     remote_src: yes
 
+- name: Remove old file content (delete file)
+  ansible.builtin.file:
+    path: /usr/share/nginx/html/
+    state: absent
+
+- name: moving the resp files
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/static/
+    dest: /usr/share/nginx/html
+
+
