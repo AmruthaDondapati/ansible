@@ -14,7 +14,7 @@
     state: started
     enabled: yes
 
-  - name: Replacing the IP address.
+- name: Replacing the IP address.
   ansible.builtin.replace:
     path: /etc/mongod.conf
     regexp: '127.0.0.1'
