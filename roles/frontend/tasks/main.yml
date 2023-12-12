@@ -18,5 +18,9 @@
   ansible.builtin.copy:
     src: /tmp/frontend-main/static/
     dest: /usr/share/nginx/html
+    remote: yes
 
-
+- name: moving the confg files
+  ansible.builtin.copy:
+    src: roboshop.conf
+    dest: etc/nginx/default.d/roboshop.conf
