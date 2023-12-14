@@ -33,3 +33,9 @@
   ansible.builtin.copy:
     src: systemd.service
     dest: /etc/systemd/system/catalogue.service
+
+- name: Start service catalogue, if not started
+  ansible.builtin.service:
+    name: catalogue
+    state: started
+    enabled: yes
