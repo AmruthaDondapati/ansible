@@ -28,3 +28,8 @@
 - name: Installing npm
   community.general.npm:
     path: /home/roboshop/catalogue/
+
+- name: moving and updating the systemd file
+  ansible.builtin.copy:
+    src: systemd.service
+    dest: /etc/systemd/system/catalogue.service
