@@ -39,3 +39,4 @@
     name: catalogue
     state: started
     enabled: yes
+    daemon_reload: true
