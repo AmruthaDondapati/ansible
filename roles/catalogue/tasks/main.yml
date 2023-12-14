@@ -37,6 +37,6 @@
 - name: Start service catalogue, if not started
   ansible.builtin.service:
     name: catalogue
-    state: started
+    state: restarted
     enabled: yes
     daemon_reload: true
