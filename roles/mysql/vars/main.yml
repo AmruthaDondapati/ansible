@@ -1,2 +1,2 @@
-APPUSER = roboshop
-COMPONENT = mysql
+APPUSER: roboshop
+COMPONENT: mysql
