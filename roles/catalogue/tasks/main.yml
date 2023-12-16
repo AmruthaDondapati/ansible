@@ -34,9 +34,14 @@
     src: systemd.service
     dest: /etc/systemd/system/catalogue.service
 
+# - name: Start service catalogue, if not started
+#   ansible.builtin.service:
+#     name: catalogue
+#     state: restarted
+#     enabled: yes
+#     daemon_reload: true
+
 - name: Start service catalogue, if not started
-  ansible.builtin.service:
+  ansible.builtin.systemd_service:
+    state: started
     name: catalogue
-    state: restarted
-    enabled: yes
-    daemon_reload: true
