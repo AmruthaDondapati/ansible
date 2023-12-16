@@ -19,3 +19,10 @@
     path: /etc/redis/redis.conf
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
+
+- name: Restarting Service 
+  ansible.builtin.systemd:
+    state: restarted
+    name: redis
+    daemon_reload: yes
+    enabled: true 
