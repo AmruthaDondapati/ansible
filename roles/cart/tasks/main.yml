@@ -29,14 +29,14 @@
   community.general.npm:
     path: /home/roboshop/user/
 
-- name: moving and updating the systemd file
-  ansible.builtin.copy:
-    src: systemd.service
-    dest: /etc/systemd/system/cart.service
+# - name: moving and updating the systemd file
+#   ansible.builtin.copy:
+#     src: systemd.service
+#     dest: /etc/systemd/system/cart.service
 
-- name: Restarting Service 
-  ansible.builtin.systemd:
-    state: restarted
-    name: user
-    daemon_reload: yes
-    enabled: true 
+# - name: Restarting Service 
+#   ansible.builtin.systemd:
+#     state: restarted
+#     name: user
+#     daemon_reload: yes
+#     enabled: true 
