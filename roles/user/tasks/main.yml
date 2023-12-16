@@ -1,0 +1,30 @@
+- name: installing node js repos
+  ansible.builtin.shell: curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash - 
+
+- name: Install nodejs
+  ansible.builtin.package:
+    name: nodejs
+    state: present
+
+- name: adding the user roboshop
+  ansible.builtin.user:
+    name: roboshop
+    comment: user added
+
+- name: download and deploy
+  ansible.builtin.unarchive:
+    src: https://github.com/stans-robot-project/user/archive/main.zip
+    dest: /tmp
+    remote_src: yes
+
+- name: moving the resp files
+  ansible.builtin.copy:
+    src: /tmp/user-main/
+    dest: /home/roboshop/user
+    remote_src: yes
+    owner: roboshop
+    group: roboshop
+
+- name: Installing npm
+  community.general.npm:
+    path: /home/roboshop/user/
