@@ -1,0 +1,5 @@
+- name: configuring the robot notion
+  hosts: local host
+  become: yes
+  roles: 
+    - "{{COMPONENT}}"
