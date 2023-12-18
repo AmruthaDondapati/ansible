@@ -28,3 +28,7 @@
   args:
     chdir: /home/roboshop/shipping              # Changing the working directory to somedir/ before executing the command
   
+- name: moving of systemd service
+  ansible.builtin.copy:
+    src: systemd.service
+    dest: /etc/systemd/system/shipping.service
