@@ -7,3 +7,18 @@
   ansible.builtin.user:
     name: roboshop
     comment: user added
+
+
+- name: download and deploy
+  ansible.builtin.unarchive:
+    src: https://github.com/stans-robot-project/shipping/archive/main.zip
+    dest: /tmp
+    remote_src: yes
+
+- name: moving the resp files
+  ansible.builtin.copy:
+    src: /tmp/shipping-main/
+    dest: /home/roboshop/shipping
+    remote_src: yes
+    owner: roboshop
+    group: roboshop
