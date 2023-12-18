@@ -5,3 +5,23 @@
       - gcc
       - python3-devel
     state: installed
+
+- name: adding the user roboshop
+  ansible.builtin.user:
+    name: roboshop
+    comment: user added
+
+
+- name: download and deploy
+  ansible.builtin.unarchive:
+    src: https://github.com/stans-robot-project/payment/archive/main.zip
+    dest: /tmp
+    remote_src: yes
+
+- name: moving the resp files
+  ansible.builtin.copy:
+    src: /tmp/payment-main/
+    dest: /home/roboshop/payment
+    remote_src: yes
+    owner: roboshop
+    group: roboshop
