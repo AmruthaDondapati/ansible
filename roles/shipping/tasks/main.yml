@@ -2,3 +2,8 @@
   ansible.builtin.package:
     name: maven
     state: installed
+
+- name: adding the user roboshop
+  ansible.builtin.user:
+    name: roboshop
+    comment: user added
