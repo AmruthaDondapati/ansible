@@ -12,7 +12,6 @@
     name: roboshop
     comment: user added
 
-
 - name: download and deploy
   ansible.builtin.unarchive:
     src: https://github.com/stans-robot-project/payment/archive/main.zip
