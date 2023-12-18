@@ -23,5 +23,8 @@
     owner: roboshop
     group: roboshop
 
-- name: mvn cln pkg and mving the target jar 
+- name: clean pkg and mving the target jar 
   ansible.builtin.shell: mvn clean package && mv target/shipping-1.0.jar shipping.jar
+  args:
+    chdir: /home/roboshop              # Changing the working directory to somedir/ before executing the command
+  
