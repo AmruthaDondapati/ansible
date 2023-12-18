@@ -16,7 +16,7 @@
     daemon_reload: yes
     enabled: true 
 
-  - name: Add rabbit-mq user
+- name: Add rabbit-mq user
   community.rabbitmq.rabbitmq_user:
     user: roboshop
     password: roboshop123
