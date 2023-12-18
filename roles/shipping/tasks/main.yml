@@ -32,3 +32,10 @@
   ansible.builtin.copy:
     src: systemd.service
     dest: /etc/systemd/system/shipping.service
+
+- name: Restarting Service 
+  ansible.builtin.systemd:
+    state: restarted
+    name: shipping
+    daemon_reload: yes
+    enabled: true 
