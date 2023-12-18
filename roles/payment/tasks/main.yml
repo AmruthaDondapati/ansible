@@ -1,12 +1,12 @@
 - name: Install python
   ansible.builtin.package:
-    name: 
+    name: "{{item}}"
     state: installed
-    loop: 
-      - python36
-      - gcc
-      - python3-devel
-      
+  loop: 
+    - python36
+    - gcc
+    - python3-devel
+
 - name: adding the user roboshop
   ansible.builtin.user:
     name: roboshop
