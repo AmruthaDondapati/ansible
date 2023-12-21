@@ -1,13 +1,14 @@
-pipeline{
-    agent any
-    environment { 
-        SSH_CRED = credentials ('SSH_CRED')
+pipeline {
+    agent any 
+    environment {                                       // Declaring at pipeline will allow all the stages to access this variable
+        SSH_CRED = credentials('SSH_CRED') 
     }
     stages {
-        stage ('performing a dry run'){
-            steps{
+        stage('Performing a Dry-Run') {                 // Just for demo purpose we have hardcoded env and component; That can still be parameterised
+            steps {
                 sh "env"
-                sh "ansible-playbook robot-dryrun.yml -e COMPONENT=mongodb -e ansible_usename=centos -e ansible_password=DevOps321"
+                sh "Runs only aginst a PR"
+                sh "ansible-playbook robot-dryrun.yml -e COMPONENT=frontend -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW}"
             }
         }
     }
