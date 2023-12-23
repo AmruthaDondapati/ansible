@@ -5,10 +5,10 @@ pipeline {
     }
     stages {
         stage('Lint Checks') {
-            // when { branch pattern: "feature-.*", comparator: "REGEXP" }
+            when { branch pattern: "feature-.*", comparator: "REGEXP" }
             steps {
                 sh "env"
-                // sh "echo runs only on feature branch"
+                sh "echo runs only on feature branch"
                 sh "echo lint cheks are completed."
             }
         }  
@@ -17,13 +17,13 @@ pipeline {
             // when { branch pattern: "PR-.*", comparator: "REGEXP"}
             steps {
                 sh "env"
-                // sh "Runs only aginst a PR"
+                sh "Runs only aginst a PR"
                 //sh "ansible-playbook robot-dryrun.yml -e COMPONENT=frontend -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e ENV=dev"
             }
         }
 
         stage('Runs against Main') {
-            // when { branch 'main' }
+            when { branch 'main' }
             steps {
                 sh "env"
                 sh "echo Main Branch"
