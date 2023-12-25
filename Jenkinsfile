@@ -35,6 +35,7 @@ pipeline {
             steps {
                 sh "env"
                 sh "echo $TAG_NAME"
+                sh "echo $TAG_NAME is this"
             }
         }
     }
